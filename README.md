@@ -110,7 +110,7 @@ Transactions are assigned risk categories based on a weighted combination of mod
 
 *Risk thresholds are illustrative and should be calibrated against validation data before operational use.*
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 | Category | Technologies |
 |---|---|
