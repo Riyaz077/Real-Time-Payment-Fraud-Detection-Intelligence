@@ -1,0 +1,2 @@
+# SentinelPay
+SentinelPay is an AI-powered financial security platform designed to detect suspicious UPI transactions using machine learning, anomaly detection, and behavioural analytics.   It integrates fraud prediction, dynamic risk scoring, Explainable AI (XAI), and intelligent alert generation to identify potentially fraudulent financial activities.   Leveraging Python, XGBoost, Random Forest, Isolation Forest, and real-time analytics, SentinelPay aims to strengthen digital payment security and financial crime intelligence.

@@ -1,0 +1,2 @@
+# Explainable AI
+The starter uses deterministic reason codes derived from observable features (e.g. new device, new beneficiary, high velocity, amount far above baseline). These are transparent indicators, not causal explanations. A future SHAP implementation can explain model contributions globally and per transaction. Validate explanation stability and avoid exposing sensitive signals to unauthorized users.

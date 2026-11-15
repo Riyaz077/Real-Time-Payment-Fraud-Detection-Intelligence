@@ -1,0 +1,11 @@
+project:
+  name: SentinelPay
+  environment: development
+model:
+  random_state: 42
+  test_size: 0.20
+  risk_threshold: 0.65
+  high_risk_threshold: 0.85
+data:
+  default_rows: 10000
+  fraud_rate: 0.025
