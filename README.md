@@ -287,6 +287,6 @@ Explore the [`docs/`](docs/) directory for detailed project documentation, inclu
 Integrated M.Tech, Computer Science and Engineering (Business Analytics)  
 VIT Chennai
 
-*Intelligence Behind Every Transaction. Security Beyond Every Payment.*
+
 
 </p>
