@@ -213,83 +213,18 @@ SentinelPay/
 └── README.md
 ```
 
-##  Installation and Setup
+## **Installation and Setup**
 
-### 1. Clone the Repository
+- Clone the SentinelPay repository from GitHub.
+- Create and activate a Python virtual environment.
+- Install project dependencies using `requirements.txt`.
+- Generate synthetic transaction data using the data generation script.
+- Train the fraud detection model and save the trained artifacts.
+- Launch the interactive Streamlit dashboard.
+- Start the FastAPI backend using Uvicorn.
+- Access API documentation, health checks, and real-time transaction scoring endpoints.
 
-```bash
-git clone https://github.com/YOUR_USERNAME/SentinelPay.git
-cd SentinelPay
-```
-
-### 2. Create a Virtual Environment
-
-**Windows:**
-
-```powershell
-python -m venv venv
-venv\Scripts\activate
-```
-
-**Linux / macOS:**
-
-```bash
-python -m venv venv
-source venv/bin/activate
-```
-
-### 3. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Generate Synthetic Transaction Data
-
-```bash
-python scripts/generate_data.py --rows 10000
-```
-
-### 5. Train the Fraud Detection Model
-
-```bash
-python scripts/train_model.py
-```
-
-The trained model artifact is saved in the `models/` directory.
-
-### 6. Launch the Streamlit Dashboard
-
-```bash
-streamlit run dashboard/app.py
-```
-
-### 7. Start the FastAPI Backend
-
-Open another terminal:
-
-```bash
-uvicorn api.main:app --reload
-```
-
-Access the API documentation:
-
-```text
-http://127.0.0.1:8000/docs
-```
-
-Health check:
-
-```text
-http://127.0.0.1:8000/health
-```
-
-Transaction scoring endpoint:
-
-```text
-POST http://127.0.0.1:8000/score
-```
-
+  
 ##  Model Evaluation
 
 Fraud detection performance should be assessed using metrics that account for class imbalance.
@@ -344,14 +279,7 @@ Explore the [`docs/`](docs/) directory for detailed project documentation, inclu
 - Testing, security and deployment.
 - Limitations and future enhancements.
 
-##  Contributions
 
-Contributions, suggestions, and improvements are welcome.
-
-1. Fork the repository.
-2. Create a feature branch.
-3. Implement and test your changes.
-4. Submit a pull request with a clear description.
 
 ## Author
 
