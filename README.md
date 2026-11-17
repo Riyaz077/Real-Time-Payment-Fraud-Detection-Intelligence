@@ -7,10 +7,7 @@
 ## Project Overview
 
 An AI-powered financial security platform designed to detect suspicious UPI-like transaction patterns using machine learning, anomaly detection, and behavioural analytics.
-
-The system integrates predictive modelling, transaction risk assessment, and automated security alerts to identify unusual payment activities and support proactive fraud monitoring.
-
-It leverages algorithms such as **Random Forest, Logistic Regression, and Isolation Forest** to analyse transaction behaviour, detect potential fraudulent activities, and generate intelligent risk scores.
+The system integrates predictive modelling, transaction risk assessment, and automated security alerts to identify unusual payment activities and support proactive fraud monitoring. It leverages algorithms such as **Random Forest, Logistic Regression, and Isolation Forest** to analyse transaction behaviour, detect potential fraudulent activities, and generate intelligent risk scores. 
 
 An interactive **Streamlit dashboard** and **FastAPI-based REST API** provide capabilities for transaction monitoring, fraud-risk assessment, analytical insights, and financial crime investigation.
 
