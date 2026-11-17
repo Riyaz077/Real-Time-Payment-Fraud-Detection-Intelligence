@@ -1,64 +1,45 @@
-#  SentinelPay
-### AI-Powered Real-Time UPI Fraud Detection and Financial Crime Intelligence
+# AI-Powered Real-Time UPI Fraud Detection and Financial Crime Intelligence
 
 **Securing Digital Payments Through Intelligent Fraud Detection, Behavioural Analytics, and AI-Powered Financial Intelligence.**
 
 ---
 
-##  Project Overview
+## Project Overview
 
-**SentinelPay** is an AI-driven financial security platform designed to identify suspicious UPI transaction patterns through machine learning, anomaly detection, and behavioural analytics. It combines predictive intelligence, transaction risk assessment, and automated security alerts to support proactive financial fraud monitoring.
+An AI-powered financial security platform designed to detect suspicious UPI-like transaction patterns using machine learning, anomaly detection, and behavioural analytics.
 
-The platform leverages machine learning algorithms such as **Random Forest, Logistic Regression, and Isolation Forest** to analyse transaction behaviour, identify unusual payment activities, and generate intelligent fraud-risk scores. An interactive analytics dashboard and REST API provide a foundation for transaction monitoring, risk assessment, and financial crime investigation.
+The system integrates predictive modelling, transaction risk assessment, and automated security alerts to identify unusual payment activities and support proactive fraud monitoring.
 
-By integrating Artificial Intelligence, Machine Learning, Explainable AI concepts, and real-time analytics architecture, SentinelPay aims to transform conventional transaction monitoring into an intelligent, data-driven financial security framework.
+It leverages algorithms such as **Random Forest, Logistic Regression, and Isolation Forest** to analyse transaction behaviour, detect potential fraudulent activities, and generate intelligent risk scores.
 
-##  Key Objectives
+An interactive **Streamlit dashboard** and **FastAPI-based REST API** provide capabilities for transaction monitoring, fraud-risk assessment, analytical insights, and financial crime investigation.
+
+## Key Objectives
 
 - Detect potentially fraudulent UPI-like transactions using machine learning.
 - Identify unusual transaction behaviour through anomaly detection.
 - Analyse transaction velocity, spending patterns, and beneficiary activity.
 - Generate intelligent transaction risk scores and security alerts.
 - Improve prediction transparency through explainable risk indicators.
-- Build an extensible architecture for real-time financial crime intelligence.
+- Develop an extensible architecture for financial crime intelligence.
 
-##  Core Features
+## Core Features
 
 | Feature | Description |
 |---|---|
 | AI Fraud Detection | Machine learning-based suspicious transaction classification. |
 | Anomaly Detection | Isolation Forest-based identification of unusual transaction patterns. |
 | Behavioural Analytics | Analysis of transaction velocity, spending deviations, and device activity. |
-| Dynamic Risk Scoring | Risk scores and Low, Medium, High, and Critical classifications. |
-| Explainable Risk Indicators | Human-readable reason codes for suspicious activity. |
+| Dynamic Risk Scoring | Risk scores with Low, Medium, High, and Critical classifications. |
+| Explainable Risk Indicators | Human-readable reason codes for suspicious activities. |
 | Transaction Monitoring | Interactive Streamlit analytics dashboard. |
-| REST API | FastAPI-based transaction risk scoring endpoint. |
+| REST API | FastAPI-based transaction risk-scoring endpoint. |
 | Automated Alerts | Structured fraud-risk alert generation. |
 | Synthetic Data Generation | Reproducible UPI-like transaction dataset generation. |
 
-##  Machine Learning Architecture
+## System Architecture
 
-SentinelPay uses a combination of supervised and unsupervised learning approaches.
-
-### Supervised Learning
-
-| Algorithm | Purpose |
-|---|---|
-| Logistic Regression | Baseline fraud classification. |
-| Random Forest | Main supervised fraud detection model. |
-| XGBoost | Planned advanced model comparison. |
-
-### Unsupervised Learning
-
-| Algorithm | Purpose |
-|---|---|
-| Isolation Forest | Detecting anomalous transaction behaviour. |
-
-### Explainable AI
-
-The current implementation generates interpretable risk indicators using behavioural features and rule-based reason codes. SHAP-based model explanations are planned for a future enhancement.
-
-##  System Architecture
+SentinelPay follows a modular architecture integrating transaction processing, machine learning, anomaly detection, risk assessment, and financial intelligence.
 
 ```mermaid
 flowchart TD
@@ -83,9 +64,33 @@ flowchart TD
     L --> N["Streamlit Dashboard"]
 ```
 
-##  Transaction Intelligence Indicators
+## Machine Learning Architecture
 
-SentinelPay analyses multiple transaction-level and behavioural indicators:
+SentinelPay combines supervised and unsupervised learning techniques to identify potentially fraudulent transaction behaviour.
+
+### Supervised Learning
+
+| Algorithm | Purpose |
+|---|---|
+| Logistic Regression | Baseline fraud classification. |
+| Random Forest | Main supervised fraud detection model. |
+| XGBoost | Planned advanced model comparison. |
+
+### Unsupervised Learning
+
+| Algorithm | Purpose |
+|---|---|
+| Isolation Forest | Detection of anomalous transaction behaviour. |
+
+### Explainable AI
+
+The current implementation generates interpretable risk indicators through behavioural features and rule-based reason codes.
+
+SHAP-based model explanations are planned as a future enhancement to improve model interpretability.
+
+## Transaction Intelligence Indicators
+
+The platform analyses multiple transaction-level and behavioural indicators:
 
 - Transaction amount deviations.
 - Unusual transaction frequency.
@@ -95,11 +100,11 @@ SentinelPay analyses multiple transaction-level and behavioural indicators:
 - Repeated failed transaction attempts.
 - Unusual spending patterns.
 
-These indicators help prioritize suspicious activity for further investigation.
+These indicators help prioritize suspicious transactions for further investigation.
 
-##  Risk Classification
+## Risk Classification
 
-Transactions are assigned risk categories based on a weighted combination of model probability and anomaly score.
+Transactions are assigned risk categories using a weighted combination of fraud probability and anomaly score.
 
 | Risk Score | Classification |
 |---|---|
@@ -108,9 +113,26 @@ Transactions are assigned risk categories based on a weighted combination of mod
 | 65–84 | 🟠 High |
 | 85–100 | 🔴 Critical |
 
-*Risk thresholds are illustrative and should be calibrated against validation data before operational use.*
+*Risk thresholds are illustrative and should be calibrated using validation data before operational use.*
 
-##  Technology Stack
+## Dataset & Data Generation
+
+SentinelPay uses synthetic UPI-like transaction data for development, experimentation, and model evaluation.
+
+The data generation process supports the creation of transaction records representing different payment behaviours and potentially suspicious activity patterns.
+
+The transaction analysis considers:
+
+- Transaction amounts and timestamps.
+- Sender and beneficiary identifiers.
+- Transaction frequency and velocity.
+- Device activity.
+- Geographical information.
+- Transaction status and fraud labels.
+
+Synthetic data enables reproducible experimentation without requiring access to confidential banking or payment information.
+
+## Technology Stack
 
 | Category | Technologies |
 |---|---|
@@ -122,12 +144,94 @@ Transactions are assigned risk categories based on a weighted combination of mod
 | Backend | FastAPI |
 | Dashboard | Streamlit |
 | Visualization | Plotly |
-| Database | SQLite (starter integration) |
+| Database | SQLite |
 | Data Storage | CSV |
 | Development | Jupyter Notebook, VS Code |
 | Version Control | Git, GitHub |
 
-##  Repository Structure
+## Model Evaluation
+
+Fraud detection performance is evaluated using metrics suitable for imbalanced classification problems.
+
+| Metric | Purpose |
+|---|---|
+| Accuracy | Overall classification correctness. |
+| Precision | Proportion of flagged transactions that are fraudulent. |
+| Recall | Proportion of fraudulent transactions detected. |
+| F1-Score | Balance between precision and recall. |
+| ROC-AUC | Ranking performance across classification thresholds. |
+| PR-AUC | Precision-recall performance under class imbalance. |
+| Confusion Matrix | Analysis of correct and incorrect predictions. |
+| False Positive Rate | Frequency of legitimate transactions incorrectly flagged. |
+
+Model performance should be established using properly separated validation and test datasets. Synthetic-data results should not be interpreted as real-world UPI fraud detection performance.
+
+## Installation & Setup
+
+**1. Clone the repository**
+
+```bash
+git clone <your-repository-url>
+cd SentinelPay
+```
+
+**2. Create a virtual environment**
+
+```bash
+python -m venv venv
+```
+
+**3. Activate the environment**
+
+Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+Linux / macOS:
+
+```bash
+source venv/bin/activate
+```
+
+**4. Install dependencies**
+
+```bash
+pip install -r requirements.txt
+```
+
+**5. Generate synthetic transaction data**
+
+```bash
+python scripts/generate_data.py
+```
+
+**6. Train the fraud detection model**
+
+```bash
+python scripts/train_model.py
+```
+
+**7. Launch the Streamlit dashboard**
+
+```bash
+streamlit run dashboard/app.py
+```
+
+**8. Start the FastAPI backend**
+
+```bash
+uvicorn api.main:app --reload
+```
+
+Access the API documentation at:
+
+`http://127.0.0.1:8000/docs`
+
+*Commands assume the corresponding scripts and application files are implemented in the repository.*
+
+## Repository Structure
 
 ```text
 SentinelPay/
@@ -213,36 +317,7 @@ SentinelPay/
 └── README.md
 ```
 
-## **Installation and Setup**
-
-- Clone the SentinelPay repository from GitHub.
-- Create and activate a Python virtual environment.
-- Install project dependencies using `requirements.txt`.
-- Generate synthetic transaction data using the data generation script.
-- Train the fraud detection model and save the trained artifacts.
-- Launch the interactive Streamlit dashboard.
-- Start the FastAPI backend using Uvicorn.
-- Access API documentation, health checks, and real-time transaction scoring endpoints.
-
-  
-##  Model Evaluation
-
-Fraud detection performance should be assessed using metrics that account for class imbalance.
-
-| Metric | Purpose |
-|---|---|
-| Accuracy | Overall classification correctness. |
-| Precision | Proportion of flagged transactions that are fraudulent. |
-| Recall | Proportion of fraudulent transactions detected. |
-| F1-Score | Balance between precision and recall. |
-| ROC-AUC | Ranking performance across classification thresholds. |
-| PR-AUC | Precision-recall performance under class imbalance. |
-| Confusion Matrix | Analysis of correct and incorrect predictions. |
-| False Positive Rate | Frequency of legitimate transactions incorrectly flagged. |
-
-Model performance should be established through properly separated validation and test datasets. Synthetic-data results must not be interpreted as real-world UPI fraud detection performance.
-
-##  Future Enhancements
+## Future Enhancements
 
 - Real-time transaction stream processing using Apache Kafka.
 - Advanced fraud classification using XGBoost.
@@ -255,7 +330,7 @@ Model performance should be established through properly separated validation an
 - Docker-based deployment and cloud infrastructure.
 - Advanced financial crime intelligence dashboard.
 
-##  Security and Responsible AI
+## Security & Responsible AI
 
 SentinelPay is developed as an educational and research-oriented prototype.
 
@@ -265,7 +340,7 @@ SentinelPay is developed as an educational and research-oriented prototype.
 - Fraud-risk predictions are indicators for investigation, not proof of criminal activity.
 - Human review is essential before any consequential financial action.
 
-##  Documentation
+## Documentation 
 
 Explore the [`docs/`](docs/) directory for detailed project documentation, including:
 
@@ -276,17 +351,11 @@ Explore the [`docs/`](docs/) directory for detailed project documentation, inclu
 - Machine learning methodology.
 - Model evaluation and explainability.
 - Risk scoring and financial crime intelligence.
-- Testing, security and deployment.
+- Testing, security, and deployment.
 - Limitations and future enhancements.
-
-
 
 ## Author
 
 **Mohamed Riyaz S.**  
-Integrated M.Tech, Computer Science and Engineering (Business Analytics)  
-VIT Chennai
-
-
-
-</p>
+Integrated M.Tech – Computer Science and Engineering (Business Analytics)  
+Vellore Institute of Technology (VIT), Chennai
